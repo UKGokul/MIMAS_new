@@ -50,7 +50,7 @@ end
 
 # Outer constructor with default values taken from the Fortran #define block and program body.
 function Config(;
-    ntrac = 1, #40_000_000, # reduced for test runs
+    ntrac = 40_000_000, # reduced for test runs
     kgitzpr = 166,
     kgitneu = 163,
     kgitneu1 = 164,
@@ -64,10 +64,10 @@ function Config(;
     dttrans_2 = 180.0,
     nstart = 0,
     i_hemi = 2,
-    start_month = 5,
+    start_month = 7,
     start_day = 10,
-    end_month = 8, # is actually 8
-    end_day = 31, # is actually 31
+    end_month = 7, # is actually 8
+    end_day = 13, # is actually 31
     start_year = 2008,
     restart_year = "1961",
     run_info = "run.out",
@@ -81,7 +81,7 @@ function Config(;
     ut1_file = "/home/gu01/HPC/atmos/ut1_10_may_MIMAS_MLFU.tab",
     lima_pfad = "/home/gu01/HPC/cop/CS33/LIMA-ICE/backgr/", # using CS33 instead of og one due to lack of permission
     restart_pfad = "/home/optik/dmf/CS33/LIMA-ICE/40mio/",
-    output_pfad = "/home/gu01/HPC/Github/MIMAS_new/init_code/output", # output file changed name as the input lima file changed, correct once after access. 
+    output_pfad = "/home/gu01/HPC/Github/MIMAS.jl/NewTry/output/Experimental_runs/", # output file changed name as the input lima file changed, correct once after access. 
     stat_pfad = "./stat/"
 )
     return Config(
